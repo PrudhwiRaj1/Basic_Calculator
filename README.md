@@ -7,6 +7,7 @@
 # Overview Of Project
 ## Task 1:Simple Calculator 
 ![image](https://github.com/PrudhwiRaj1/Basic_Calculator/assets/174160463/a5ec9b66-e23e-4aff-83d9-bf8d5013a436)
+![image](https://github.com/PrudhwiRaj1/Basic_Calculator/assets/174160463/d5383ad3-5235-40b3-8ed0-5942a4cf0a28)
 
 
 ## Project Name:Basic_Calculator
