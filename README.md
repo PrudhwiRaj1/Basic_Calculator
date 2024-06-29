@@ -6,7 +6,8 @@
 **Mentor:** Neela Santhosh Kumar <br>
 # Overview Of Project
 ## Task 1:Simple Calculator 
-![Screenshot 2024-06-28 125031](https://github.com/PrudhwiRaj1/Basic_Calculator/assets/174160463/ac2c9d1d-deb1-4155-89a4-374334567d37)
+![image](https://github.com/PrudhwiRaj1/Basic_Calculator/assets/174160463/a5ec9b66-e23e-4aff-83d9-bf8d5013a436)
+
 
 ## Project Name:Basic_Calculator
 ### Objective
