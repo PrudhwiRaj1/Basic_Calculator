@@ -23,3 +23,7 @@ Built GUI for Calculator which works on mouse clicks on each key of calculator a
 -> **Java Programming**<br>
 -> **Apache NetBeans**<br>
 -> **Absolute Layout**
+### File Description
+-> **Task1_Files/Basic_Calculator.form** -NetBeans GUI form which is created by NetBeans automatically when interface is designed.
+-> **Task1_Files/Basic_Calculator.java** -Background Coding which works  through Button Click/Action Performed which is triggers only on happening of Event.
+-> **lib** -Libraries used for layout of GUI 'Absolute Layout'
