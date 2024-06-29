@@ -29,5 +29,5 @@ Built GUI for Calculator which works on mouse clicks on each key of calculator a
 -> **dist/lib** -Libraries used for layout of GUI 'Absolute Layout'.<br>
 -> **dist**- Folder content 'Basic_Calculator.jar' is created when  Clean and Built in NetBeans.
 ### Working 
-Download this Git repository as Zip folder and extract.
+Download this Git repository as Zip folder and extract.<br>
 Then Open Basic_Calculator.form in Task1_Files folder
