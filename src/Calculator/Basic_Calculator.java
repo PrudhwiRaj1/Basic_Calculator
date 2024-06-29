@@ -507,21 +507,21 @@ public class Basic_Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_DOTActionPerformed
 
     private void PLUSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PLUSActionPerformed
-        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("%"))) {
+        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("^"))) {
             Str = Area.getText() + " + ";
             Area.setText(Str);
             decimalPointEntered = false;
         }
     }//GEN-LAST:event_PLUSActionPerformed
     private void SUBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SUBActionPerformed
-        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("%"))) {
+        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("^"))) {
             Str = Area.getText() + " - ";
             Area.setText(Str);
             decimalPointEntered = false;
         }
     }//GEN-LAST:event_SUBActionPerformed
     private void MULTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MULTActionPerformed
-        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("%"))) {
+        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("^"))) {
             Str = Area.getText() + " * ";
             Area.setText(Str);
             decimalPointEntered = false;
@@ -529,7 +529,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_MULTActionPerformed
 
     private void DIVIDEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DIVIDEActionPerformed
-        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("%"))) {
+        if (!(Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains("*") || Area.getText().contains("/") || Area.getText().contains("^"))) {
             Str = Area.getText() + " / ";
             Area.setText(Str);
             decimalPointEntered = false;
