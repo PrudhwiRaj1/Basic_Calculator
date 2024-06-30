@@ -568,11 +568,8 @@ public class Basic_Calculator extends javax.swing.JFrame {
     private void EQUALSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUALSActionPerformed
         try {
 
-            if (flag == 1) {
-                l = Area.getText().length() + 1;
-            } else {
-                l = Area.getText().length();
-            }
+            l = Area.getText().length();
+
             Num1 = Double.parseDouble(Str.substring(0, Str.indexOf(" ")));
             Num2 = Double.parseDouble(Str.substring(Str.indexOf(" ") + 2, l));
             Op = Str.substring(Str.indexOf(" ") + 1, Str.indexOf(" ") + 2);
@@ -595,7 +592,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
                     Area.setText("");
             }
 
-            Area.setText(String.format("%.2f", Result));
+            Area.setText(String.valueOf(Result));
 
             decimalPointEntered = true;
         } catch (Exception e) {
@@ -621,11 +618,11 @@ public class Basic_Calculator extends javax.swing.JFrame {
     private void ROOTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ROOTActionPerformed
         try {
             Result = Math.sqrt(Double.parseDouble(Area.getText()));
-            Area.setText(String.format("%.3f",Result));
-            if(Area.getText().endsWith(".000"))
-            {
-                Area.setText(String.valueOf(Result));
-            }
+               if (String.valueOf(Result).contains(".999") || String.valueOf(Result).contains(".000")) {
+                    Result = Math.round(Result);
+                }
+            Area.setText(String.valueOf(Result));
+
         } catch (Exception e) {
             Area.setText("Error!");
         }
@@ -643,10 +640,10 @@ public class Basic_Calculator extends javax.swing.JFrame {
 
             } else {
                 Result = Math.pow(Double.parseDouble(Area.getText()), 2);
-                if (String.valueOf(Result).endsWith(".9999")) {
+                if (String.valueOf(Result).contains(".999") || String.valueOf(Result).contains(".000")) {
                     Result = Math.round(Result);
                 }
-                Area.setText(String.format("%.2f", Result));
+                Area.setText(String.valueOf(Result));
             }
 
         } catch (Exception e) {
@@ -659,7 +656,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
         try {
             Result = Math.pow(Double.parseDouble(Area.getText()), -1);
             Area.setText(String.valueOf(Result));
-           
+
         } catch (Exception e) {
             Area.setText("Error!");
         }
