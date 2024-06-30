@@ -18,8 +18,8 @@ public class Basic_Calculator extends javax.swing.JFrame {
     double Result;
     String Str;
     String Op;
-
-    private boolean decimalPointEntered = false;
+    int flag, l;
+    public boolean decimalPointEntered = false;
 
     public Basic_Calculator() {
         initComponents();
@@ -567,13 +567,19 @@ public class Basic_Calculator extends javax.swing.JFrame {
 
     private void EQUALSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EQUALSActionPerformed
         try {
-            int l = Area.getText().length();
 
+            if (flag == 1) {
+                l = Area.getText().length() + 1;
+            } else {
+                l = Area.getText().length();
+            }
             Num1 = Double.parseDouble(Str.substring(0, Str.indexOf(" ")));
             Num2 = Double.parseDouble(Str.substring(Str.indexOf(" ") + 2, l));
             Op = Str.substring(Str.indexOf(" ") + 1, Str.indexOf(" ") + 2);
             History.setText(String.valueOf(Area.getText() + " ="));
-
+            if (flag == 1) {
+                Area.setText(Area.getText() + "0");
+            }
             switch (Op) {
                 case "+" ->
                     Result = Num1 + Num2;
@@ -615,7 +621,11 @@ public class Basic_Calculator extends javax.swing.JFrame {
     private void ROOTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ROOTActionPerformed
         try {
             Result = Math.sqrt(Double.parseDouble(Area.getText()));
-            Area.setText(String.format("%.3f", Result));
+            Area.setText(String.format("%.3f",Result));
+            if(Area.getText().endsWith(".000"))
+            {
+                Area.setText(String.valueOf(Result));
+            }
         } catch (Exception e) {
             Area.setText("Error!");
         }
@@ -624,7 +634,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
 
     private void SQUAREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SQUAREActionPerformed
         try {
-            if ((Area.getText().contains("+")) || Area.getText().contains("-") || Area.getText().contains(("*")) || Area.getText().contains("/") || Area.getText().contains("%")) {
+            if ((Area.getText().contains("+")) || Area.getText().contains("-") || Area.getText().contains(("*")) || Area.getText().contains("/") || Area.getText().contains("^")) {
                 String n1 = Str.substring(0, Str.indexOf(" ")) + " ";
                 String n2 = Str.substring(Str.indexOf(" ") + 2, Area.getText().length());
                 Op = Str.substring(Str.indexOf(" ") + 1, Str.indexOf(" ") + 3);
@@ -633,7 +643,10 @@ public class Basic_Calculator extends javax.swing.JFrame {
 
             } else {
                 Result = Math.pow(Double.parseDouble(Area.getText()), 2);
-                Area.setText(String.format("%.3f", Result));
+                if (String.valueOf(Result).endsWith(".9999")) {
+                    Result = Math.round(Result);
+                }
+                Area.setText(String.format("%.2f", Result));
             }
 
         } catch (Exception e) {
@@ -645,7 +658,8 @@ public class Basic_Calculator extends javax.swing.JFrame {
     private void FRACTIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FRACTIONActionPerformed
         try {
             Result = Math.pow(Double.parseDouble(Area.getText()), -1);
-            Area.setText(String.format("%.7f", Result));
+            Area.setText(String.valueOf(Result));
+           
         } catch (Exception e) {
             Area.setText("Error!");
         }
@@ -667,7 +681,7 @@ public class Basic_Calculator extends javax.swing.JFrame {
 
     private void piActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piActionPerformed
         try {
-            if ((Area.getText().equals("")||Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains(" * ") || Area.getText().contains(" / ") || Area.getText().contains(" % "))) {
+            if ((Area.getText().equals("") || Area.getText().contains(" + ") || Area.getText().contains(" - ") || Area.getText().contains(" * ") || Area.getText().contains(" / ") || Area.getText().contains(" % "))) {
 
                 Area.setText(Area.getText() + "3.14");
             }
